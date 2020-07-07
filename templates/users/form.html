@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}User registration form {% endblock %}
+
+{% block content %}
+             <section class="container" id="main">
+            <form action="/users/new" method="post">
+                <div class="field">
+                    <label class="label" for="first_name">First Name</label>
+                    <div class="control">
+                      <input class="input" type="text" name="first_name" placeholder="First Name">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="last_name">Last Name</label>
+                    <div class="control">
+                      <input class="input" type="text" name="last_name" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="image_url">Image URL</label>
+                    <div class="control">
+                      <input class="input" type="text" name="image_url" placeholder="Image">
+                    </div>
+                  </div>
+
+                  <div class="control">
+                    <button class="button is-link">Submit</button>
+                  </div>
+                </form>
+           </section> 
+           {% endblock %}
