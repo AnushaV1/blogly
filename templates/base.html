@@ -7,6 +7,13 @@
  <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
+    {% if get_flashed_messages() %}
+    {% for msg in get_flashed_messages() %}
+   <p class="error">{{msg}}</p>
+   {% endfor %}
+   {% endif %}
+   <div>
     {% block content %} {% endblock %}
+</div>
 </body>
 </html>
